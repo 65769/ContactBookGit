@@ -162,9 +162,9 @@ public class Main {
     private static void getNumber(Scanner in, ContactBook cBook) {
         int number;
         number = in.nextInt(); in.nextLine();
-        if (cBook.hasNumber(number)) {
-            System.out.println(cBook.getNumber(number));
-        }
+        Contact contact = cBook.getNumber(number);
+        if (contact != null) {
+            System.out.println(contact.getName());
         else System.out.println(NUMBER_NOT_EXIST);
     }
 
@@ -174,6 +174,5 @@ public class Main {
         }
         else System.out.println(DIFFERENT_PHONES);
     }
-
 
 }
