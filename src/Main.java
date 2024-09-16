@@ -24,7 +24,7 @@ public class Main {
     public static final String CONTACT_REMOVED = "contactBook.Contact removed.";
     public static final String CONTACT_UPDATED = "contactBook.Contact updated.";
     public static final String BOOK_EMPTY = "contactBook.Contact book empty.";
-    public static final String NUMBER_NOT_EXIST = "Number does not exist.";
+    public static final String NUMBER_NOT_EXIST = "Phone number does not exist.";
     public static final String EQUAL_PHONES = "There are contacts that share phone numbers.";
     public static final String DIFFERENT_PHONES = "All contacts have different phone numbers.";
     public static final String QUIT_MSG = "Goodbye!";
@@ -163,7 +163,7 @@ public class Main {
         int number;
         number = in.nextInt(); in.nextLine();
         Contact contact = cBook.getNumber(number);
-        if (contact != null) {
+        if (contact != null)
             System.out.println(contact.getName());
         else System.out.println(NUMBER_NOT_EXIST);
     }
